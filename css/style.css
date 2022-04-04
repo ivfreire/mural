@@ -1,1 +1,44 @@
-* { margin: 0; padding: 0; }
+* {
+    margin: 0; 
+    padding: 0; 
+}
+
+body { overflow: hidden;  }
+
+canvas { 
+    background-color: #DEDEDE;
+}
+
+div.palette {
+    position: absolute;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    top: 10px;
+    left: 10px;
+}
+
+div.palette div.colors {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+div.palette div.colors button.color {
+    margin: 5px;
+    border: hidden;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    transition: all 0.2s;
+    outline: none;
+    border: 1px solid #000000;
+}
+
+div.palette button.color:hover { transform: scale(1.2); }
+
+div.palette button.color[name=red] { background-color: #FF0000; }
+div.palette button.color[name=green] { background-color: #00FF00; }
+div.palette button.color[name=blue] { background-color: #0000FF; }
+div.palette button.color[name=white] { background-color: #FFFFFF; }
+div.palette button.color[name=black] { background-color: #000000; }

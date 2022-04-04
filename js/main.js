@@ -1,7 +1,31 @@
 
 const Palette = {
     color: 4,
-    colors: [ '#FF0000', '#00FF00', '#0000FF', '#FFFFFF', '#000000' ],
+    colors: [],
+
+    load: function() {
+        let XHR = new XMLHttpRequest();
+        XHR.open('GET', 'data/palette.txt', true);
+        XHR.responseType = 'text';
+
+        XHR.onload = function(ev) {
+            let colors = XHR.responseText.split('\n');
+
+            let c = 0;
+            colors.forEach((color) => {
+                $('div.colors').append(`<button class="color" value="${c}" style="background: #${color};" title="#${color}" onclick="Palette.selectColor(${c})"></button>`);
+                Palette.colors.push(`#${color}`);
+                c++;
+            });
+        }
+
+        XHR.send();
+    },
+
+    selectColor: function(id) {
+        Palette.color = id;
+    },
+
     current: function() { return this.colors[this.color]; },
     getColor: function(i) { return this.colors[i]; }
 }
@@ -24,6 +48,8 @@ const Canvas = {
         this.camera = { x: 0, y: 0 }
 
         Canvas.canvas.onclick = (ev) => Canvas.setTile(ev);
+
+        Palette.load();
 
         this.load();
         setInterval(this.update, 500);
@@ -152,8 +178,6 @@ const Canvas = {
 
 window.onload = Canvas.init();
 window.onresize = Canvas.resize();
-window.onmousedown = (ev) => Canvas.mouseDown(ev);
-window.onmouseup = (ev) => Canvas.mouseUp(ev);
-window.onmousemove = (ev) => Canvas.mouseMove(ev);
-
-$('button.color').on('click', function() { Palette.color = parseInt($(this).attr('value')); });
+Canvas.canvas.onmousedown = (ev) => Canvas.mouseDown(ev);
+Canvas.canvas.onmouseup = (ev) => Canvas.mouseUp(ev);
+Canvas.canvas.onmousemove = (ev) => Canvas.mouseMove(ev);

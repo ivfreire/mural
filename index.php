@@ -12,11 +12,7 @@
     <div class="palette">
         <h3>Color Palette</h3>
         <div class="colors">
-            <button class="color" name="red" value="0" title="Red"></button>
-            <button class="color" name="green" value="1" title="Green"></button>
-            <button class="color" name="blue" value="2" title="Blue"></button>
-            <button class="color" name="white" value="3" title="White"></button>
-            <button class="color" name="black" value="4" title="Black"></button>
+            <!-- <button class="color" name="red" value="0" title="Red"></button> -->
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

@@ -9,12 +9,11 @@
 </head>
 <body>
     <canvas></canvas>
-    <div class="palette">
-        <h3>Color Palette</h3>
-        <div class="colors">
-            <!-- <button class="color" name="red" value="0" title="Red"></button> -->
+    <nav class="navigation">
+        <div class="palette">
+            <div class="colors"></div>
         </div>
-    </div>
+    </nav>
     <footer>
         <a href="https://twitter.com/ovfreire">@ovfreire</a>
         <a href="https://github.com/ivfreire">GitHub</a>

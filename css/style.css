@@ -25,32 +25,36 @@ footer a {
 
 footer a:hover { text-decoration: underline; }
 
-div.palette {
+nav.navigation { 
     position: absolute;
-    padding: 10px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #bbb;
+}
+
+div.palette {
+    padding: 20px 100px;
     background-color: white;
-    border-radius: 10px;
-    border: 1px solid #000000;
     top: 10px;
     left: 10px;
+    text-align: center;
 }
 
 div.palette div.colors {
-    width: 240px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    border-radius: 5px;
-    overflow: hidden;
-    border: 1px solid #454545;
 }
 
 div.palette div.colors button.color {
     border: hidden;
     width: 24px;
     height: 24px;
+    border-radius: 100%;
     transition: all 0.1s;
     outline: none;
+    margin: 2px;
 }
 
 div.palette button.color:hover {

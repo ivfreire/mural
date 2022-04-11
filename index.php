@@ -15,6 +15,10 @@
             <!-- <button class="color" name="red" value="0" title="Red"></button> -->
         </div>
     </div>
+    <footer>
+        <a href="https://twitter.com/ovfreire">@ovfreire</a>
+        <a href="https://github.com/ivfreire">GitHub</a>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/main.js"></script>
 </body>

@@ -9,6 +9,22 @@ canvas {
     background-color: #DEDEDE;
 }
 
+footer {
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+
+footer a:hover { text-decoration: underline; }
+
 div.palette {
     position: absolute;
     padding: 10px;
